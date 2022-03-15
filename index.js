@@ -1,7 +1,7 @@
-import * as _ from "lodash";
+const _ = require("lodash");
 
 
-export function parseGitLabWebhookPushEvent(event) {
+let parseGitLabWebhookPushEvent = function (event) {
     let objectKind = _.get(event, ['body', 'object_kind']);
 
     let repositoryName = _.get(event, ['body', 'repository', 'name']);
@@ -20,7 +20,7 @@ export function parseGitLabWebhookPushEvent(event) {
 }
 
 
-export function parseGitLabWebhookTagPushEvent(event) {
+let parseGitLabWebhookTagPushEvent = function (event) {
     let objectKind = _.get(event, ['body', 'object_kind']);
 
     let repositoryName = _.get(event, ['body', 'repository', 'name']);
@@ -36,7 +36,7 @@ export function parseGitLabWebhookTagPushEvent(event) {
     return {message: `${userNiceName} [${username}] tagged ${checkoutSha} with tag ${ref} in Repository ${repositoryName}:\n\n${repositoryUrl}`}
 }
 
-export function parseGitLabWebhookIssueEvent(event) {
+let parseGitLabWebhookIssueEvent = function (event) {
     let objectKind = _.get(event, ['body', 'object_kind']);
 
     let repositoryName = _.get(event, ['body', 'repository', 'name']);
@@ -60,7 +60,7 @@ export function parseGitLabWebhookIssueEvent(event) {
 
 }
 
-export function parseGitLabWebhookNoteEvent(event) {
+let parseGitLabWebhookNoteEvent = function (event) {
     let objectKind = _.get(event, ['body', 'object_kind']);
 
     let repositoryName = _.get(event, ['body', 'repository', 'name']);
@@ -96,7 +96,7 @@ export function parseGitLabWebhookNoteEvent(event) {
 
 }
 
-export function parseGitLabWebhookMergeRequestEvent(event) {
+let parseGitLabWebhookMergeRequestEvent = function (event) {
     let objectKind = _.get(event, ['body', 'object_kind']);
 
     let repositoryName = _.get(event, ['body', 'repository', 'name']);
@@ -124,7 +124,7 @@ export function parseGitLabWebhookMergeRequestEvent(event) {
 }
 
 
-export function parseGitLabWebhookWikiPageEvent(event) {
+let parseGitLabWebhookWikiPageEvent = function (event) {
     let objectKind = _.get(event, ['body', 'object_kind']);
 
     let repositoryName = _.get(event, ['body', 'repository', 'name']);
@@ -147,7 +147,7 @@ export function parseGitLabWebhookWikiPageEvent(event) {
 }
 
 
-export function parseGitLabWebhookEvent(event) {
+let parseGitLabWebhookEvent = function (event) {
 
     let objectKind = _.get(event, ['body', 'object_kind']);
 
@@ -169,4 +169,14 @@ export function parseGitLabWebhookEvent(event) {
         return parseGitLabWebhookWikiPageEvent(event);
     }
 
+}
+
+module.exports = {
+    parseGitLabWebhookEvent,
+    parseGitLabWebhookPushEvent,
+    parseGitLabWebhookTagPushEvent,
+    parseGitLabWebhookIssueEvent,
+    parseGitLabWebhookNoteEvent,
+    parseGitLabWebhookMergeRequestEvent,
+    parseGitLabWebhookWikiPageEvent
 }
