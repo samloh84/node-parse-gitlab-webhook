@@ -48,7 +48,7 @@ export function parseMergeRequestEvent(event, callbacks) {
     }
 
     let actionVerb = actionVerbs[action];
-    let message = `${user} ${actionVerb} a [Merge Request ${mergeRequestId} ${mergeRequestTitle}](${mergeRequestUrl}) in ${project}`;
+    let message = `${user} ${actionVerb} a ${mergeRequest} in ${project}`;
     return {user, project, message}
 
 }

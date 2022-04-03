@@ -34,9 +34,9 @@ export function parseReleaseEvent(event, callbacks) {
     }
     let release_name = _.get(body, 'name');
     let release_url = _.get(body, 'url');
+    let tag = _.get(body, 'tag');
 
-
-    let message = `${user} ${verb} [Release ${release_name}](${release_url}) in ${project}`;
+    let message = `[Release ${release_name}](${release_url}) has been ${verb} using Tag ${tag} in ${project}`;
 
 
     return {
