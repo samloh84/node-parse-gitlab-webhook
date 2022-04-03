@@ -1,12 +1,16 @@
-import job_event from "./payloads/job.json";
-import {parseGitLabWebhookJobEvent} from "../index";
+import {
+    parseFeatureFlagEvent
+} from "../parseFeatureFlagEvent.js";
 import * as chai from "chai";
+import {readJsonFileSync} from "./util/FileUtil.js";
+
+const feature_flag_event = readJsonFileSync("./payloads/feature_flag.json");
 
 const should = chai.should();
 
-describe('parseGitLabWebhookJobEvent', function () {
+describe('parseGitLabWebhookFeatureFlagEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookJobEvent(job_event);
+        let result = parseFeatureFlagEvent(feature_flag_event);
         should.exist(result);
 
         result.should.have.property('user');

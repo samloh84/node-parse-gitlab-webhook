@@ -1,11 +1,14 @@
-const tag_push_event = require('./payloads/tag_push.json');
-const {parseGitLabWebhookTagPushEvent} = require('../index');
+import {parseJobEvent} from "../parseJobEvent.js";
 import * as chai from "chai";
+import {readJsonFileSync} from "./util/FileUtil.js";
+
+const job_event = readJsonFileSync("./payloads/job.json");
+
 const should = chai.should();
 
-describe('parseGitLabWebhookTagPushEvent', function () {
+describe('parseGitLabWebhookJobEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookTagPushEvent(tag_push_event);
+        let result = parseJobEvent(job_event);
         should.exist(result);
 
         result.should.have.property('user');

@@ -1,12 +1,14 @@
-import issue_event from "./payloads/issue.json";
 import * as chai from "chai";
-import {parseGitLabWebhookIssueEvent} from "../index";
+import {parseIssueEvent} from "../parseIssueEvent.js";
+import {readJsonFileSync} from "./util/FileUtil.js";
+
+const issue_event = readJsonFileSync("./payloads/issue.json");
 
 const should = chai.should();
 
 describe('parseGitLabWebhookIssueEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookIssueEvent(issue_event);
+        let result = parseIssueEvent(issue_event);
         should.exist(result);
 
         result.should.have.property('user');

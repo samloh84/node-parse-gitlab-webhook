@@ -1,8 +1,8 @@
 import _ from "lodash";
-import {formatUser} from "./formatUser";
-import {formatRepository} from "./formatRepository";
+import {formatUser} from "./formatUser.js";
+import {formatRepository} from "./formatRepository.js";
 
-export function parseGitLabWebhookWikiPageEvent(event, callbacks) {
+export function parseMergeRequestEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
@@ -25,16 +25,21 @@ export function parseGitLabWebhookWikiPageEvent(event, callbacks) {
     let object_attributes = _.get(body, 'object_attributes');
 
     let action = _.get(object_attributes, 'action');
-    let wikiPageUrl = _.get(object_attributes, 'url');
-    let wikiPageTitle = _.get(object_attributes, 'title');
+    let mergeRequestUrl = _.get(object_attributes, 'url');
+    let mergeRequestId = _.get(object_attributes, 'id');
+    let mergeRequestTitle = _.get(object_attributes, 'title');
     let actionVerbs = {
-        'create': 'created',
+        'open': 'opened',
+        'close': 'closed',
+        'reopen': 'reopened',
         'update': 'updated',
-        'delete': 'deleted',
+        'approved': 'approved',
+        'unapproved': 'unapproved',
+        'merge': 'merged'
     }
 
     let actionVerb = actionVerbs[action];
-    let message = `${user} ${actionVerb} a [Wiki Page ${wikiPageTitle}](${wikiPageUrl}) in ${repository}`;
+    let message = `${user} ${actionVerb} a [Merge Request ${mergeRequestId} ${mergeRequestTitle}](${mergeRequestUrl}) in ${repository}`;
     return {user, repository, message}
 
 }

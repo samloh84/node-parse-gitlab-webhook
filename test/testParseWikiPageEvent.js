@@ -1,11 +1,18 @@
-const release_event = require('./payloads/release.json');
-const {parseGitLabWebhookReleaseEvent} = require('../index');
+import {readJsonFileSync} from "./util/FileUtil.js";
 import * as chai from "chai";
+
+import {
+    parseWikiPageEvent
+} from "../parseWikiPageEvent.js";
+
+const tag_push_event = readJsonFileSync('./payloads/tag_push.json');
+
+
 const should = chai.should();
 
-describe('parseGitLabWebhookReleaseEvent', function () {
+describe('parseGitLabWebhookWikiPageEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookReleaseEvent(release_event);
+        let result = parseWikiPageEvent(tag_push_event);
         should.exist(result);
 
         result.should.have.property('user');

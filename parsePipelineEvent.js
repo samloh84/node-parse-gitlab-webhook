@@ -1,6 +1,8 @@
 import _ from "lodash";
+import {formatUser} from "./formatUser.js";
+import {formatRepository} from "./formatRepository.js";
 
-export function parseGitLabWebhookPipelineEvent(event, callbacks) {
+export function parsePipelineEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');

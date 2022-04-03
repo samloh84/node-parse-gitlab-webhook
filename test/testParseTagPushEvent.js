@@ -1,11 +1,18 @@
-const merge_request_event = require('./payloads/merge_request.json');
-const {parseGitLabWebhookMergeRequestEvent} = require('../index');
+import {readJsonFileSync} from "./util/FileUtil.js";
 import * as chai from "chai";
+
+import {
+    parseTagPushEvent
+} from "../parseTagPushEvent.js";
+
+const tag_push_event = readJsonFileSync('./payloads/tag_push.json');
+
+
 const should = chai.should();
 
-describe('parseGitLabWebhookMergeRequestEvent', function () {
+describe('parseGitLabWebhookTagPushEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookMergeRequestEvent(merge_request_event);
+        let result = parseTagPushEvent(tag_push_event);
         should.exist(result);
 
         result.should.have.property('user');

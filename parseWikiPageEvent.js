@@ -1,8 +1,8 @@
 import _ from "lodash";
-import {formatUser} from "./formatUser";
-import {formatRepository} from "./formatRepository";
+import {formatUser} from "./formatUser.js";
+import {formatRepository} from "./formatRepository.js";
 
-export function parseGitLabWebhookIssueEvent(event, callbacks) {
+export function parseWikiPageEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
@@ -24,24 +24,17 @@ export function parseGitLabWebhookIssueEvent(event, callbacks) {
 
     let object_attributes = _.get(body, 'object_attributes');
 
-
     let action = _.get(object_attributes, 'action');
-    let issueUrl = _.get(object_attributes, 'url');
-    let issueId = _.get(object_attributes, 'id');
-    let issueTitle = _.get(object_attributes, 'title');
+    let wikiPageUrl = _.get(object_attributes, 'url');
+    let wikiPageTitle = _.get(object_attributes, 'title');
     let actionVerbs = {
-        'open': 'opened',
-        'close': 'closed',
-        'reopen': 'reopened',
+        'create': 'created',
         'update': 'updated',
+        'delete': 'deleted',
     }
 
     let actionVerb = actionVerbs[action];
-    let message = `${user} ${actionVerb} an [Issue ${issueId} ${issueTitle}](${issueUrl}) in ${repository}`;
-    return {
-        user,
-        repository,
-        message
-    }
+    let message = `${user} ${actionVerb} a [Wiki Page ${wikiPageTitle}](${wikiPageUrl}) in ${repository}`;
+    return {user, repository, message}
 
 }

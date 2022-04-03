@@ -1,11 +1,18 @@
-import feature_flag_event from "./payloads/feature_flag.json";
-import {parseGitLabWebhookFeatureFlagEvent} from "../index";
 import * as chai from "chai";
+import {readJsonFileSync} from "./util/FileUtil.js";
+
+import {
+    parseMergeRequestEvent
+} from "../parseMergeRequestEvent.js";
+
+
+const merge_request_event = readJsonFileSync("./payloads/merge_request.json");
+
 const should = chai.should();
 
-describe('parseGitLabWebhookFeatureFlagEvent', function () {
+describe('parseGitLabWebhookMergeRequestEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookFeatureFlagEvent(feature_flag_event);
+        let result = parseMergeRequestEvent(merge_request_event);
         should.exist(result);
 
         result.should.have.property('user');

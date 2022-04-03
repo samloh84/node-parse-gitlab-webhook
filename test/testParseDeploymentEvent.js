@@ -1,14 +1,16 @@
-import {parseGitLabWebhookDeploymentEvent} from "../index.js";
+import {
+    parseDeploymentEvent
+} from "../parseDeploymentEvent.js";
 import * as chai from "chai";
-import {readFileSync} from "node:fs";
+import {readJsonFileSync} from "./util/FileUtil.js";
 
-const deployment_event = readFileSync("./payloads/deployment.json");
+const deployment_event = readJsonFileSync("./payloads/deployment.json");
 
 const should = chai.should();
 
 describe('parseGitLabWebhookDeploymentEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookDeploymentEvent(deployment_event);
+        let result = parseDeploymentEvent(deployment_event);
         should.exist(result);
 
         result.should.have.property('user');

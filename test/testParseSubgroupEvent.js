@@ -1,16 +1,20 @@
-import group_member_add_event from "./payloads/group_member_add.json";
-import group_member_remove_event from "./payloads/group_member_remove.json";
-import group_member_update_event from "./payloads/group_member_update.json";
-import {parseGitLabWebhookMemberEvent} from "../index";
-
-
+import {readJsonFileSync} from "./util/FileUtil.js";
 import * as chai from "chai";
+
+import {
+    parseSubgroupEvent
+} from "../parseSubgroupEvent.js";
+
+const subgroup_add_event = readJsonFileSync('./payloads/subgroup_add.json');
+const subgroup_remove_event = readJsonFileSync('./payloads/subgroup_remove.json');
+
 
 const should = chai.should();
 
-describe('parseGitLabWebhookMemberEvent', function () {
+describe('parseGitLabWebhookSubgroupEvent', function () {
+
     it(`should return a message on Add Event`, function () {
-        let result = parseGitLabWebhookMemberEvent(group_member_add_event);
+        let result = parseSubgroupEvent(subgroup_add_event);
         should.exist(result);
 
         result.should.have.property('user');
@@ -30,9 +34,8 @@ describe('parseGitLabWebhookMemberEvent', function () {
         result.message.should.not.have.string("null");
 
     })
-
     it(`should return a message on Remove Event`, function () {
-        let result = parseGitLabWebhookMemberEvent(group_member_remove_event);
+        let result = parseSubgroupEvent(subgroup_remove_event);
         should.exist(result);
 
         result.should.have.property('user');
@@ -53,25 +56,4 @@ describe('parseGitLabWebhookMemberEvent', function () {
 
     })
 
-    it(`should return a message on Update Event`, function () {
-        let result = parseGitLabWebhookMemberEvent(group_member_update_event);
-        should.exist(result);
-
-        result.should.have.property('user');
-        console.log(`user: ${result.user}`);
-        result.user.should.not.have.string("undefined");
-        result.user.should.not.have.string("null");
-
-        result.should.have.property('repository');
-        console.log(`repository: ${result.repository}`);
-        result.repository.should.not.have.string("undefined");
-        result.repository.should.not.have.string("null");
-
-
-        result.should.have.property('message');
-        console.log(`Message: ${result.message}`);
-        result.message.should.not.have.string("undefined");
-        result.message.should.not.have.string("null");
-
-    })
 })

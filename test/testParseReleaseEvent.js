@@ -1,11 +1,18 @@
-const push_event = require('./payloads/push.json');
-const {parseGitLabWebhookPushEvent} = require('../index');
+import {readJsonFileSync} from "./util/FileUtil.js";
 import * as chai from "chai";
+
+import {
+    parseReleaseEvent
+} from "../parseReleaseEvent.js";
+
+const release_event = readJsonFileSync('./payloads/release.json');
+
+
 const should = chai.should();
 
-describe('parseGitLabWebhookPushEvent', function () {
+describe('parseGitLabWebhookReleaseEvent', function () {
     it(`should return a message`, function () {
-        let result = parseGitLabWebhookPushEvent(push_event);
+        let result = parseReleaseEvent(release_event);
         should.exist(result);
 
         result.should.have.property('user');
