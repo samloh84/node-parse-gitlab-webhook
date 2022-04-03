@@ -32,7 +32,6 @@ import {
 
 import _ from "lodash";
 
-// https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html
 
 
 export function parseEvent(event, callbacks) {
