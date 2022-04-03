@@ -1,12 +1,12 @@
 import _ from "lodash";
 import {formatUser} from "./formatUser.js";
-import {formatRepository} from "./formatRepository.js";
+import {formatProject} from "./formatProject.js";
 
 export function parsePushEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
-    let formatRepositoryCallback = _.get(callbacks, 'formatRepository');
+    let formatProjectCallback = _.get(callbacks, 'formatProject');
 
     let user;
     if (!_.isNil(formatUserCallback)) {
@@ -15,11 +15,11 @@ export function parsePushEvent(event, callbacks) {
         user = formatUser(event);
     }
 
-    let repository;
-    if (!_.isNil(formatRepositoryCallback)) {
-        repository = formatRepositoryCallback(event);
+    let project;
+    if (!_.isNil(formatProjectCallback)) {
+        project = formatProjectCallback(event);
     } else {
-        repository = formatRepository(event);
+        project = formatProject(event);
     }
 
     let total_commits_count = _.get(body, 'total_commits_count');
@@ -29,10 +29,10 @@ export function parsePushEvent(event, callbacks) {
     let latestCommit = _.find(commits, {id: after});
     let latestCommitUrl = _.get(latestCommit, 'url');
 
-    let message = `${user} pushed [${total_commits_count} commits](${latestCommitUrl}) to ${ref} on ${repository}`;
+    let message = `${user} pushed [${total_commits_count} commits](${latestCommitUrl}) to ${ref} on ${project}`;
     return {
         user,
-        repository,
+        project,
         message
     }
 }

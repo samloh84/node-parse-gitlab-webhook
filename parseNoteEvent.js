@@ -1,12 +1,12 @@
 import _ from "lodash";
 import {formatUser} from "./formatUser.js";
-import {formatRepository} from "./formatRepository.js";
+import {formatProject} from "./formatProject.js";
 
 export function parseNoteEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
-    let formatRepositoryCallback = _.get(callbacks, 'formatRepository');
+    let formatProjectCallback = _.get(callbacks, 'formatProject');
 
     let user;
     if (!_.isNil(formatUserCallback)) {
@@ -15,11 +15,11 @@ export function parseNoteEvent(event, callbacks) {
         user = formatUser(event);
     }
 
-    let repository;
-    if (!_.isNil(formatRepositoryCallback)) {
-        repository = formatRepositoryCallback(event);
+    let project;
+    if (!_.isNil(formatProjectCallback)) {
+        project = formatProjectCallback(event);
     } else {
-        repository = formatRepository(event);
+        project = formatProject(event);
     }
 
     let object_attributes = _.get(body, 'object_attributes');
@@ -55,8 +55,8 @@ export function parseNoteEvent(event, callbacks) {
 
     return {
         user,
-        repository,
+        project,
         noteTarget,
-        message: `${user} [${actionVerb}](${noteUrl}) on ${noteTarget} in ${repository}:\n${note}`
+        message: `${user} [${actionVerb}](${noteUrl}) on ${noteTarget} in ${project}:\n${note}`
     }
 }

@@ -1,12 +1,12 @@
 import _ from "lodash";
 import {formatUser} from "./formatUser.js";
-import {formatRepository} from "./formatRepository.js";
+import {formatProject} from "./formatProject.js";
 
 export function parseIssueEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
-    let formatRepositoryCallback = _.get(callbacks, 'formatRepository');
+    let formatProjectCallback = _.get(callbacks, 'formatProject');
 
     let user;
     if (!_.isNil(formatUserCallback)) {
@@ -15,11 +15,11 @@ export function parseIssueEvent(event, callbacks) {
         user = formatUser(event);
     }
 
-    let repository;
-    if (!_.isNil(formatRepositoryCallback)) {
-        repository = formatRepositoryCallback(event);
+    let project;
+    if (!_.isNil(formatProjectCallback)) {
+        project = formatProjectCallback(event);
     } else {
-        repository = formatRepository(event);
+        project = formatProject(event);
     }
 
     let object_attributes = _.get(body, 'object_attributes');
@@ -37,10 +37,10 @@ export function parseIssueEvent(event, callbacks) {
     }
 
     let actionVerb = actionVerbs[action];
-    let message = `${user} ${actionVerb} an [Issue ${issueId} ${issueTitle}](${issueUrl}) in ${repository}`;
+    let message = `${user} ${actionVerb} an [Issue ${issueId} ${issueTitle}](${issueUrl}) in ${project}`;
     return {
         user,
-        repository,
+        project,
         message
     }
 

@@ -5,27 +5,27 @@ import {
     parseSubgroupEvent
 } from "../parseSubgroupEvent.js";
 
-const subgroup_add_event = readJsonFileSync('./payloads/subgroup_add.json');
-const subgroup_remove_event = readJsonFileSync('./payloads/subgroup_remove.json');
+const subgroup_add_event = readJsonFileSync('./test/payloads/subgroup_add.json');
+const subgroup_remove_event = readJsonFileSync('./test/payloads/subgroup_remove.json');
 
 
 const should = chai.should();
 
-describe('parseGitLabWebhookSubgroupEvent', function () {
+describe('parseSubgroupEvent', function () {
 
     it(`should return a message on Add Event`, function () {
         let result = parseSubgroupEvent(subgroup_add_event);
         should.exist(result);
 
         result.should.have.property('user');
-        console.log(`user: ${result.user}`);
+        console.log(`User: ${result.user}`);
         result.user.should.not.have.string("undefined");
         result.user.should.not.have.string("null");
 
-        result.should.have.property('repository');
-        console.log(`repository: ${result.repository}`);
-        result.repository.should.not.have.string("undefined");
-        result.repository.should.not.have.string("null");
+        result.should.have.property('project');
+        console.log(`Project: ${result.project}`);
+        result.project.should.not.have.string("undefined");
+        result.project.should.not.have.string("null");
 
 
         result.should.have.property('message');
@@ -39,14 +39,14 @@ describe('parseGitLabWebhookSubgroupEvent', function () {
         should.exist(result);
 
         result.should.have.property('user');
-        console.log(`user: ${result.user}`);
+        console.log(`User: ${result.user}`);
         result.user.should.not.have.string("undefined");
         result.user.should.not.have.string("null");
 
-        result.should.have.property('repository');
-        console.log(`repository: ${result.repository}`);
-        result.repository.should.not.have.string("undefined");
-        result.repository.should.not.have.string("null");
+        result.should.have.property('project');
+        console.log(`Project: ${result.project}`);
+        result.project.should.not.have.string("undefined");
+        result.project.should.not.have.string("null");
 
 
         result.should.have.property('message');

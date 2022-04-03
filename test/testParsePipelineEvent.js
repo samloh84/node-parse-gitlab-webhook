@@ -2,17 +2,17 @@ import {readJsonFileSync} from "./util/FileUtil.js";
 import * as chai from "chai";
 
 import {
-    parseReleaseEvent
-} from "../parseReleaseEvent.js";
+    parsePipelineEvent
+} from "../parsePipelineEvent.js";
 
-const release_event = readJsonFileSync('./test/payloads/release.json');
+const pipeline_event = readJsonFileSync('./test/payloads/pipeline.json');
 
 
 const should = chai.should();
 
-describe('parseReleaseEvent', function () {
+describe('parsePipelineEvent', function () {
     it(`should return a message`, function () {
-        let result = parseReleaseEvent(release_event);
+        let result = parsePipelineEvent(pipeline_event);
         should.exist(result);
 
         result.should.have.property('user');
