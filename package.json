@@ -3,8 +3,9 @@
   "version": "1.0.1",
   "description": "Node.js Parse GitLab Webhook",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "url": "https://github.com/samloh84/node-parse-gitlab-webhook.git"
@@ -13,5 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
   }
 }

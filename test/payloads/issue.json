@@ -1,0 +1,122 @@
+{
+  "method": "POST",
+  "path": "/",
+  "query": {},
+  "client_ip": "34.74.226.8",
+  "url": "https://redacted/",
+  "headers": {
+    "host": "redacted",
+    "content-length": "2122",
+    "content-type": "application/json",
+    "user-agent": "GitLab/14.10.0-pre",
+    "x-gitlab-event": "Issue Hook",
+    "x-gitlab-event-uuid": "51d36f79-e9c4-4509-b8b6-04d6d7902a09"
+  },
+  "bodyRaw": "{\"object_kind\":\"issue\",\"event_type\":\"issue\",\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"project\":{\"id\":9483835,\"name\":\"redacted_repo\",\"description\":\"\",\"web_url\":\"https://gitlab.com/redacted_user/redacted_repo\",\"avatar_url\":null,\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"namespace\":\"Samuel Loh\",\"visibility_level\":0,\"path_with_namespace\":\"redacted_user/redacted_repo\",\"default_branch\":\"main\",\"ci_config_path\":null,\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\"},\"object_attributes\":{\"author_id\":18686,\"closed_at\":null,\"confidential\":false,\"created_at\":\"2022-03-24 02:27:07 UTC\",\"description\":\"\",\"discussion_locked\":null,\"due_date\":null,\"id\":105390787,\"iid\":6,\"last_edited_at\":null,\"last_edited_by_id\":null,\"milestone_id\":null,\"moved_to_id\":null,\"duplicated_to_id\":null,\"project_id\":9483835,\"relative_position\":null,\"state_id\":1,\"time_estimate\":0,\"title\":\"test\",\"updated_at\":\"2022-03-24 02:27:07 UTC\",\"updated_by_id\":null,\"weight\":null,\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/issues/6\",\"total_time_spent\":0,\"time_change\":0,\"human_total_time_spent\":null,\"human_time_change\":null,\"human_time_estimate\":null,\"assignee_ids\":[],\"assignee_id\":null,\"labels\":[],\"state\":\"opened\",\"severity\":\"unknown\",\"action\":\"open\"},\"labels\":[],\"changes\":{\"author_id\":{\"previous\":null,\"current\":18686},\"created_at\":{\"previous\":null,\"current\":\"2022-03-24 02:27:07 UTC\"},\"description\":{\"previous\":null,\"current\":\"\"},\"id\":{\"previous\":null,\"current\":105390787},\"iid\":{\"previous\":null,\"current\":6},\"project_id\":{\"previous\":null,\"current\":9483835},\"title\":{\"previous\":null,\"current\":\"test\"},\"updated_at\":{\"previous\":null,\"current\":\"2022-03-24 02:27:07 UTC\"}},\"repository\":{\"name\":\"redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"description\":\"\",\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\"}}",
+  "body": {
+    "object_kind": "issue",
+    "event_type": "issue",
+    "user": {
+      "id": 18686,
+      "name": "Samuel Loh",
+      "username": "redacted_user",
+      "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+      "email": "[REDACTED]"
+    },
+    "project": {
+      "id": 9483835,
+      "name": "redacted_repo",
+      "description": "",
+      "web_url": "https://gitlab.com/redacted_user/redacted_repo",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "namespace": "Samuel Loh",
+      "visibility_level": 0,
+      "path_with_namespace": "redacted_user/redacted_repo",
+      "default_branch": "main",
+      "ci_config_path": null,
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "http_url": "https://gitlab.com/redacted_user/redacted_repo.git"
+    },
+    "object_attributes": {
+      "author_id": 18686,
+      "closed_at": null,
+      "confidential": false,
+      "created_at": "2022-03-24 02:27:07 UTC",
+      "description": "",
+      "discussion_locked": null,
+      "due_date": null,
+      "id": 105390787,
+      "iid": 6,
+      "last_edited_at": null,
+      "last_edited_by_id": null,
+      "milestone_id": null,
+      "moved_to_id": null,
+      "duplicated_to_id": null,
+      "project_id": 9483835,
+      "relative_position": null,
+      "state_id": 1,
+      "time_estimate": 0,
+      "title": "test",
+      "updated_at": "2022-03-24 02:27:07 UTC",
+      "updated_by_id": null,
+      "weight": null,
+      "url": "https://gitlab.com/redacted_user/redacted_repo/-/issues/6",
+      "total_time_spent": 0,
+      "time_change": 0,
+      "human_total_time_spent": null,
+      "human_time_change": null,
+      "human_time_estimate": null,
+      "assignee_ids": [],
+      "assignee_id": null,
+      "labels": [],
+      "state": "opened",
+      "severity": "unknown",
+      "action": "open"
+    },
+    "labels": [],
+    "changes": {
+      "author_id": {
+        "previous": null,
+        "current": 18686
+      },
+      "created_at": {
+        "previous": null,
+        "current": "2022-03-24 02:27:07 UTC"
+      },
+      "description": {
+        "previous": null,
+        "current": ""
+      },
+      "id": {
+        "previous": null,
+        "current": 105390787
+      },
+      "iid": {
+        "previous": null,
+        "current": 6
+      },
+      "project_id": {
+        "previous": null,
+        "current": 9483835
+      },
+      "title": {
+        "previous": null,
+        "current": "test"
+      },
+      "updated_at": {
+        "previous": null,
+        "current": "2022-03-24 02:27:07 UTC"
+      }
+    },
+    "repository": {
+      "name": "redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "description": "",
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo"
+    }
+  }
+}

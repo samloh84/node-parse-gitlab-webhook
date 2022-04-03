@@ -1,0 +1,78 @@
+{
+  "method": "POST",
+  "path": "/",
+  "query": {},
+  "client_ip": "34.74.226.8",
+  "url": "https://redacted/",
+  "headers": {
+    "host": "redacted",
+    "content-length": "1714",
+    "content-type": "application/json",
+    "user-agent": "GitLab/14.10.0-pre",
+    "x-gitlab-event": "Push Hook",
+    "x-gitlab-event-uuid": "ce251681-27bd-4efc-992a-318aef59e4e3"
+  },
+  "bodyRaw": "{\"object_kind\":\"push\",\"event_name\":\"push\",\"before\":\"0000000000000000000000000000000000000000\",\"after\":\"f90812c8478f91fb74e616b57095ea7c8da64788\",\"ref\":\"refs/heads/main\",\"checkout_sha\":\"f90812c8478f91fb74e616b57095ea7c8da64788\",\"message\":null,\"user_id\":18686,\"user_name\":\"Samuel Loh\",\"user_username\":\"redacted_user\",\"user_email\":\"\",\"user_avatar\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"project_id\":9483835,\"project\":{\"id\":9483835,\"name\":\"redacted_repo\",\"description\":\"\",\"web_url\":\"https://gitlab.com/redacted_user/redacted_repo\",\"avatar_url\":null,\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"namespace\":\"Samuel Loh\",\"visibility_level\":0,\"path_with_namespace\":\"redacted_user/redacted_repo\",\"default_branch\":\"main\",\"ci_config_path\":null,\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\"},\"commits\":[{\"id\":\"f90812c8478f91fb74e616b57095ea7c8da64788\",\"message\":\"Update README.md\",\"title\":\"Update README.md\",\"timestamp\":\"2022-03-24T01:55:21+00:00\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/commit/f90812c8478f91fb74e616b57095ea7c8da64788\",\"author\":{\"name\":\"Samuel Loh\",\"email\":\"redacted_user@gmail.com\"},\"added\":[\"README.md\"],\"modified\":[],\"removed\":[]}],\"total_commits_count\":1,\"push_options\":{},\"repository\":{\"name\":\"redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"description\":\"\",\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"visibility_level\":0}}",
+  "body": {
+    "object_kind": "push",
+    "event_name": "push",
+    "before": "0000000000000000000000000000000000000000",
+    "after": "f90812c8478f91fb74e616b57095ea7c8da64788",
+    "ref": "refs/heads/main",
+    "checkout_sha": "f90812c8478f91fb74e616b57095ea7c8da64788",
+    "message": null,
+    "user_id": 18686,
+    "user_name": "Samuel Loh",
+    "user_username": "redacted_user",
+    "user_email": "",
+    "user_avatar": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+    "project_id": 9483835,
+    "project": {
+      "id": 9483835,
+      "name": "redacted_repo",
+      "description": "",
+      "web_url": "https://gitlab.com/redacted_user/redacted_repo",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "namespace": "Samuel Loh",
+      "visibility_level": 0,
+      "path_with_namespace": "redacted_user/redacted_repo",
+      "default_branch": "main",
+      "ci_config_path": null,
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "http_url": "https://gitlab.com/redacted_user/redacted_repo.git"
+    },
+    "commits": [
+      {
+        "id": "f90812c8478f91fb74e616b57095ea7c8da64788",
+        "message": "Update README.md",
+        "title": "Update README.md",
+        "timestamp": "2022-03-24T01:55:21+00:00",
+        "url": "https://gitlab.com/redacted_user/redacted_repo/-/commit/f90812c8478f91fb74e616b57095ea7c8da64788",
+        "author": {
+          "name": "Samuel Loh",
+          "email": "redacted_user@gmail.com"
+        },
+        "added": [
+          "README.md"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    ],
+    "total_commits_count": 1,
+    "push_options": {},
+    "repository": {
+      "name": "redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "description": "",
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "visibility_level": 0
+    }
+  }
+}

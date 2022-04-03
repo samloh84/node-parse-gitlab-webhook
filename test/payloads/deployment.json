@@ -1,0 +1,55 @@
+{
+  "method": "POST",
+  "path": "/",
+  "query": {},
+  "client_ip": "34.74.226.8",
+  "url": "https://redacted/",
+  "headers": {
+    "host": "redacted",
+    "content-length": "1235",
+    "content-type": "application/json",
+    "user-agent": "GitLab/14.10.0-pre",
+    "x-gitlab-event": "Deployment Hook",
+    "x-gitlab-event-uuid": "33b37c99-73dd-499f-b4e1-a91ec787d239"
+  },
+  "bodyRaw": "{\"object_kind\":\"deployment\",\"status\":\"running\",\"status_changed_at\":\"2022-03-24 02:10:08 +0000\",\"deployment_id\":265035392,\"deployable_id\":2243233665,\"deployable_url\":\"https://gitlab.com/redacted_user/redacted_repo/-/jobs/2243233665\",\"environment\":\"test\",\"project\":{\"id\":9483835,\"name\":\"redacted_repo\",\"description\":\"\",\"web_url\":\"https://gitlab.com/redacted_user/redacted_repo\",\"avatar_url\":null,\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"namespace\":\"Samuel Loh\",\"visibility_level\":0,\"path_with_namespace\":\"redacted_user/redacted_repo\",\"default_branch\":\"main\",\"ci_config_path\":null,\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\"},\"short_sha\":\"0a52eff8\",\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"user_url\":\"https://gitlab.com/redacted_user\",\"commit_url\":\"https://gitlab.com/redacted_user/redacted_repo/-/commit/0a52eff843f4499e1ddb0018b40d1fd087ba080c\",\"commit_title\":\"Update .gitlab-ci.yml file\",\"ref\":\"main\"}",
+  "body": {
+    "object_kind": "deployment",
+    "status": "running",
+    "status_changed_at": "2022-03-24 02:10:08 +0000",
+    "deployment_id": 265035392,
+    "deployable_id": 2243233665,
+    "deployable_url": "https://gitlab.com/redacted_user/redacted_repo/-/jobs/2243233665",
+    "environment": "test",
+    "project": {
+      "id": 9483835,
+      "name": "redacted_repo",
+      "description": "",
+      "web_url": "https://gitlab.com/redacted_user/redacted_repo",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "namespace": "Samuel Loh",
+      "visibility_level": 0,
+      "path_with_namespace": "redacted_user/redacted_repo",
+      "default_branch": "main",
+      "ci_config_path": null,
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "http_url": "https://gitlab.com/redacted_user/redacted_repo.git"
+    },
+    "short_sha": "0a52eff8",
+    "user": {
+      "id": 18686,
+      "name": "Samuel Loh",
+      "username": "redacted_user",
+      "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+      "email": "[REDACTED]"
+    },
+    "user_url": "https://gitlab.com/redacted_user",
+    "commit_url": "https://gitlab.com/redacted_user/redacted_repo/-/commit/0a52eff843f4499e1ddb0018b40d1fd087ba080c",
+    "commit_title": "Update .gitlab-ci.yml file",
+    "ref": "main"
+  }
+}

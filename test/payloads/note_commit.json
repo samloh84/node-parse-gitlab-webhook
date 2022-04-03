@@ -1,0 +1,89 @@
+{
+  "method": "POST",
+  "path": "/",
+  "query": {},
+  "client_ip": "34.74.226.4",
+  "url": "https://redacted/",
+  "headers": {
+    "host": "redacted",
+    "content-length": "1969",
+    "content-type": "application/json",
+    "user-agent": "GitLab/14.10.0-pre",
+    "x-gitlab-event": "Note Hook",
+    "x-gitlab-event-uuid": "b029baed-dd23-4a59-a67d-45c02663971c"
+  },
+  "bodyRaw": "{\"object_kind\":\"note\",\"event_type\":\"note\",\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"project_id\":9483835,\"project\":{\"id\":9483835,\"name\":\"redacted_repo\",\"description\":\"\",\"web_url\":\"https://gitlab.com/redacted_user/redacted_repo\",\"avatar_url\":null,\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"namespace\":\"Samuel Loh\",\"visibility_level\":0,\"path_with_namespace\":\"redacted_user/redacted_repo\",\"default_branch\":\"main\",\"ci_config_path\":null,\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\"},\"object_attributes\":{\"attachment\":null,\"author_id\":18686,\"change_position\":null,\"commit_id\":\"f90812c8478f91fb74e616b57095ea7c8da64788\",\"created_at\":\"2022-03-24 02:06:09 UTC\",\"discussion_id\":\"3e55ea02d5a6c234dc6114ace6bf5b3f4209398d\",\"id\":886548634,\"line_code\":null,\"note\":\"test\",\"noteable_id\":null,\"noteable_type\":\"Commit\",\"original_position\":null,\"position\":null,\"project_id\":9483835,\"resolved_at\":null,\"resolved_by_id\":null,\"resolved_by_push\":null,\"st_diff\":null,\"system\":false,\"type\":null,\"updated_at\":\"2022-03-24 02:06:09 UTC\",\"updated_by_id\":null,\"description\":\"test\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/commit/f90812c8478f91fb74e616b57095ea7c8da64788#note_886548634\"},\"repository\":{\"name\":\"redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"description\":\"\",\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\"},\"commit\":{\"id\":\"f90812c8478f91fb74e616b57095ea7c8da64788\",\"message\":\"Update README.md\",\"title\":\"Update README.md\",\"timestamp\":\"2022-03-24T01:55:21+00:00\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/commit/f90812c8478f91fb74e616b57095ea7c8da64788\",\"author\":{\"name\":\"Samuel Loh\",\"email\":\"redacted_user@gmail.com\"}}}",
+  "body": {
+    "object_kind": "note",
+    "event_type": "note",
+    "user": {
+      "id": 18686,
+      "name": "Samuel Loh",
+      "username": "redacted_user",
+      "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+      "email": "[REDACTED]"
+    },
+    "project_id": 9483835,
+    "project": {
+      "id": 9483835,
+      "name": "redacted_repo",
+      "description": "",
+      "web_url": "https://gitlab.com/redacted_user/redacted_repo",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "namespace": "Samuel Loh",
+      "visibility_level": 0,
+      "path_with_namespace": "redacted_user/redacted_repo",
+      "default_branch": "main",
+      "ci_config_path": null,
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "http_url": "https://gitlab.com/redacted_user/redacted_repo.git"
+    },
+    "object_attributes": {
+      "attachment": null,
+      "author_id": 18686,
+      "change_position": null,
+      "commit_id": "f90812c8478f91fb74e616b57095ea7c8da64788",
+      "created_at": "2022-03-24 02:06:09 UTC",
+      "discussion_id": "3e55ea02d5a6c234dc6114ace6bf5b3f4209398d",
+      "id": 886548634,
+      "line_code": null,
+      "note": "test",
+      "noteable_id": null,
+      "noteable_type": "Commit",
+      "original_position": null,
+      "position": null,
+      "project_id": 9483835,
+      "resolved_at": null,
+      "resolved_by_id": null,
+      "resolved_by_push": null,
+      "st_diff": null,
+      "system": false,
+      "type": null,
+      "updated_at": "2022-03-24 02:06:09 UTC",
+      "updated_by_id": null,
+      "description": "test",
+      "url": "https://gitlab.com/redacted_user/redacted_repo/-/commit/f90812c8478f91fb74e616b57095ea7c8da64788#note_886548634"
+    },
+    "repository": {
+      "name": "redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "description": "",
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo"
+    },
+    "commit": {
+      "id": "f90812c8478f91fb74e616b57095ea7c8da64788",
+      "message": "Update README.md",
+      "title": "Update README.md",
+      "timestamp": "2022-03-24T01:55:21+00:00",
+      "url": "https://gitlab.com/redacted_user/redacted_repo/-/commit/f90812c8478f91fb74e616b57095ea7c8da64788",
+      "author": {
+        "name": "Samuel Loh",
+        "email": "redacted_user@gmail.com"
+      }
+    }
+  }
+}

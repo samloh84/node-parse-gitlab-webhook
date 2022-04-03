@@ -1,0 +1,78 @@
+{
+  "method": "POST",
+  "path": "/",
+  "query": {},
+  "client_ip": "34.74.90.74",
+  "url": "https://redacted/",
+  "headers": {
+    "host": "redacted",
+    "content-length": "1577",
+    "content-type": "application/json",
+    "user-agent": "GitLab/14.10.0-pre",
+    "x-gitlab-event": "Release Hook",
+    "x-gitlab-event-uuid": "a2e915cf-5e5b-4055-8846-112e3caec00a"
+  },
+  "bodyRaw": "{\"id\":4553979,\"created_at\":\"2022-03-24 02:02:13 UTC\",\"description\":\"\",\"name\":\"test\",\"released_at\":\"2022-03-24 02:02:13 UTC\",\"tag\":\"test\",\"object_kind\":\"release\",\"project\":{\"id\":9483835,\"name\":\"redacted_repo\",\"description\":\"\",\"web_url\":\"https://gitlab.com/redacted_user/redacted_repo\",\"avatar_url\":null,\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"namespace\":\"Samuel Loh\",\"visibility_level\":0,\"path_with_namespace\":\"redacted_user/redacted_repo\",\"default_branch\":\"main\",\"ci_config_path\":null,\"homepage\":\"https://gitlab.com/redacted_user/redacted_repo\",\"url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\"},\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/releases/test\",\"action\":\"create\",\"assets\":{\"count\":4,\"links\":[],\"sources\":[{\"format\":\"zip\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.zip\"},{\"format\":\"tar.gz\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.tar.gz\"},{\"format\":\"tar.bz2\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.tar.bz2\"},{\"format\":\"tar\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.tar\"}]},\"commit\":{\"id\":\"6b148bb0b7987a9fc6e6a33684f09b79be54229a\",\"message\":\"Update .gitlab-ci.yml file\",\"title\":\"Update .gitlab-ci.yml file\",\"timestamp\":\"2022-03-24T01:56:56+00:00\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/commit/6b148bb0b7987a9fc6e6a33684f09b79be54229a\",\"author\":{\"name\":\"Samuel Loh\",\"email\":\"redacted_user@gmail.com\"}}}",
+  "body": {
+    "id": 4553979,
+    "created_at": "2022-03-24 02:02:13 UTC",
+    "description": "",
+    "name": "test",
+    "released_at": "2022-03-24 02:02:13 UTC",
+    "tag": "test",
+    "object_kind": "release",
+    "project": {
+      "id": 9483835,
+      "name": "redacted_repo",
+      "description": "",
+      "web_url": "https://gitlab.com/redacted_user/redacted_repo",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "namespace": "Samuel Loh",
+      "visibility_level": 0,
+      "path_with_namespace": "redacted_user/redacted_repo",
+      "default_branch": "main",
+      "ci_config_path": null,
+      "homepage": "https://gitlab.com/redacted_user/redacted_repo",
+      "url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "http_url": "https://gitlab.com/redacted_user/redacted_repo.git"
+    },
+    "url": "https://gitlab.com/redacted_user/redacted_repo/-/releases/test",
+    "action": "create",
+    "assets": {
+      "count": 4,
+      "links": [],
+      "sources": [
+        {
+          "format": "zip",
+          "url": "https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.zip"
+        },
+        {
+          "format": "tar.gz",
+          "url": "https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.tar.gz"
+        },
+        {
+          "format": "tar.bz2",
+          "url": "https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.tar.bz2"
+        },
+        {
+          "format": "tar",
+          "url": "https://gitlab.com/redacted_user/redacted_repo/-/archive/test/redacted_repo-test.tar"
+        }
+      ]
+    },
+    "commit": {
+      "id": "6b148bb0b7987a9fc6e6a33684f09b79be54229a",
+      "message": "Update .gitlab-ci.yml file",
+      "title": "Update .gitlab-ci.yml file",
+      "timestamp": "2022-03-24T01:56:56+00:00",
+      "url": "https://gitlab.com/redacted_user/redacted_repo/-/commit/6b148bb0b7987a9fc6e6a33684f09b79be54229a",
+      "author": {
+        "name": "Samuel Loh",
+        "email": "redacted_user@gmail.com"
+      }
+    }
+  }
+}

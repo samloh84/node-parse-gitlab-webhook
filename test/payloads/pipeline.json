@@ -1,0 +1,200 @@
+{
+  "method": "POST",
+  "path": "/",
+  "query": {},
+  "client_ip": "34.74.226.4",
+  "url": "https://redacted/",
+  "headers": {
+    "host": "redacted",
+    "content-length": "3653",
+    "content-type": "application/json",
+    "user-agent": "GitLab/14.10.0-pre",
+    "x-gitlab-event": "Pipeline Hook",
+    "x-gitlab-event-uuid": "17021c55-5159-4f8c-a876-ff96ed014fea"
+  },
+  "bodyRaw": "{\"object_kind\":\"pipeline\",\"object_attributes\":{\"id\":499750269,\"ref\":\"main\",\"tag\":false,\"sha\":\"6b148bb0b7987a9fc6e6a33684f09b79be54229a\",\"before_sha\":\"f90812c8478f91fb74e616b57095ea7c8da64788\",\"source\":\"push\",\"status\":\"running\",\"detailed_status\":\"running\",\"stages\":[\"build\",\"test\",\"deploy\"],\"created_at\":\"2022-03-24 01:56:57 UTC\",\"finished_at\":null,\"duration\":null,\"queued_duration\":null,\"variables\":[]},\"merge_request\":null,\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"project\":{\"id\":9483835,\"name\":\"redacted_repo\",\"description\":\"\",\"web_url\":\"https://gitlab.com/redacted_user/redacted_repo\",\"avatar_url\":null,\"git_ssh_url\":\"git@gitlab.com:redacted_user/redacted_repo.git\",\"git_http_url\":\"https://gitlab.com/redacted_user/redacted_repo.git\",\"namespace\":\"Samuel Loh\",\"visibility_level\":0,\"path_with_namespace\":\"redacted_user/redacted_repo\",\"default_branch\":\"main\",\"ci_config_path\":null},\"commit\":{\"id\":\"6b148bb0b7987a9fc6e6a33684f09b79be54229a\",\"message\":\"Update .gitlab-ci.yml file\",\"title\":\"Update .gitlab-ci.yml file\",\"timestamp\":\"2022-03-24T01:56:56+00:00\",\"url\":\"https://gitlab.com/redacted_user/redacted_repo/-/commit/6b148bb0b7987a9fc6e6a33684f09b79be54229a\",\"author\":{\"name\":\"Samuel Loh\",\"email\":\"redacted_user@gmail.com\"}},\"builds\":[{\"id\":2243203682,\"stage\":\"test\",\"name\":\"unit-test-job\",\"status\":\"created\",\"created_at\":\"2022-03-24 01:56:57 UTC\",\"started_at\":null,\"finished_at\":null,\"duration\":null,\"queued_duration\":null,\"when\":\"on_success\",\"manual\":false,\"allow_failure\":false,\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"runner\":null,\"artifacts_file\":{\"filename\":null,\"size\":null},\"environment\":null},{\"id\":2243203683,\"stage\":\"test\",\"name\":\"lint-test-job\",\"status\":\"created\",\"created_at\":\"2022-03-24 01:56:57 UTC\",\"started_at\":null,\"finished_at\":null,\"duration\":null,\"queued_duration\":null,\"when\":\"on_success\",\"manual\":false,\"allow_failure\":false,\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"runner\":null,\"artifacts_file\":{\"filename\":null,\"size\":null},\"environment\":null},{\"id\":2243203684,\"stage\":\"deploy\",\"name\":\"deploy-job\",\"status\":\"created\",\"created_at\":\"2022-03-24 01:56:57 UTC\",\"started_at\":null,\"finished_at\":null,\"duration\":null,\"queued_duration\":null,\"when\":\"on_success\",\"manual\":false,\"allow_failure\":false,\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"runner\":null,\"artifacts_file\":{\"filename\":null,\"size\":null},\"environment\":null},{\"id\":2243203681,\"stage\":\"build\",\"name\":\"build-job\",\"status\":\"running\",\"created_at\":\"2022-03-24 01:56:57 UTC\",\"started_at\":\"2022-03-24 01:56:58 UTC\",\"finished_at\":null,\"duration\":0.237594236,\"queued_duration\":0.212991,\"when\":\"on_success\",\"manual\":false,\"allow_failure\":false,\"user\":{\"id\":18686,\"name\":\"Samuel Loh\",\"username\":\"redacted_user\",\"avatar_url\":\"https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon\",\"email\":\"[REDACTED]\"},\"runner\":{\"id\":12270845,\"description\":\"1-green.shared.runners-manager.gitlab.com/default\",\"runner_type\":\"instance_type\",\"active\":true,\"is_shared\":true,\"tags\":[\"gce\",\"east-c\",\"linux\",\"ruby\",\"mysql\",\"postgres\",\"mongo\",\"git-annex\",\"shared\",\"docker\"]},\"artifacts_file\":{\"filename\":null,\"size\":null},\"environment\":null}]}",
+  "body": {
+    "object_kind": "pipeline",
+    "object_attributes": {
+      "id": 499750269,
+      "ref": "main",
+      "tag": false,
+      "sha": "6b148bb0b7987a9fc6e6a33684f09b79be54229a",
+      "before_sha": "f90812c8478f91fb74e616b57095ea7c8da64788",
+      "source": "push",
+      "status": "running",
+      "detailed_status": "running",
+      "stages": [
+        "build",
+        "test",
+        "deploy"
+      ],
+      "created_at": "2022-03-24 01:56:57 UTC",
+      "finished_at": null,
+      "duration": null,
+      "queued_duration": null,
+      "variables": []
+    },
+    "merge_request": null,
+    "user": {
+      "id": 18686,
+      "name": "Samuel Loh",
+      "username": "redacted_user",
+      "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+      "email": "[REDACTED]"
+    },
+    "project": {
+      "id": 9483835,
+      "name": "redacted_repo",
+      "description": "",
+      "web_url": "https://gitlab.com/redacted_user/redacted_repo",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:redacted_user/redacted_repo.git",
+      "git_http_url": "https://gitlab.com/redacted_user/redacted_repo.git",
+      "namespace": "Samuel Loh",
+      "visibility_level": 0,
+      "path_with_namespace": "redacted_user/redacted_repo",
+      "default_branch": "main",
+      "ci_config_path": null
+    },
+    "commit": {
+      "id": "6b148bb0b7987a9fc6e6a33684f09b79be54229a",
+      "message": "Update .gitlab-ci.yml file",
+      "title": "Update .gitlab-ci.yml file",
+      "timestamp": "2022-03-24T01:56:56+00:00",
+      "url": "https://gitlab.com/redacted_user/redacted_repo/-/commit/6b148bb0b7987a9fc6e6a33684f09b79be54229a",
+      "author": {
+        "name": "Samuel Loh",
+        "email": "redacted_user@gmail.com"
+      }
+    },
+    "builds": [
+      {
+        "id": 2243203682,
+        "stage": "test",
+        "name": "unit-test-job",
+        "status": "created",
+        "created_at": "2022-03-24 01:56:57 UTC",
+        "started_at": null,
+        "finished_at": null,
+        "duration": null,
+        "queued_duration": null,
+        "when": "on_success",
+        "manual": false,
+        "allow_failure": false,
+        "user": {
+          "id": 18686,
+          "name": "Samuel Loh",
+          "username": "redacted_user",
+          "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+          "email": "[REDACTED]"
+        },
+        "runner": null,
+        "artifacts_file": {
+          "filename": null,
+          "size": null
+        },
+        "environment": null
+      },
+      {
+        "id": 2243203683,
+        "stage": "test",
+        "name": "lint-test-job",
+        "status": "created",
+        "created_at": "2022-03-24 01:56:57 UTC",
+        "started_at": null,
+        "finished_at": null,
+        "duration": null,
+        "queued_duration": null,
+        "when": "on_success",
+        "manual": false,
+        "allow_failure": false,
+        "user": {
+          "id": 18686,
+          "name": "Samuel Loh",
+          "username": "redacted_user",
+          "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+          "email": "[REDACTED]"
+        },
+        "runner": null,
+        "artifacts_file": {
+          "filename": null,
+          "size": null
+        },
+        "environment": null
+      },
+      {
+        "id": 2243203684,
+        "stage": "deploy",
+        "name": "deploy-job",
+        "status": "created",
+        "created_at": "2022-03-24 01:56:57 UTC",
+        "started_at": null,
+        "finished_at": null,
+        "duration": null,
+        "queued_duration": null,
+        "when": "on_success",
+        "manual": false,
+        "allow_failure": false,
+        "user": {
+          "id": 18686,
+          "name": "Samuel Loh",
+          "username": "redacted_user",
+          "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+          "email": "[REDACTED]"
+        },
+        "runner": null,
+        "artifacts_file": {
+          "filename": null,
+          "size": null
+        },
+        "environment": null
+      },
+      {
+        "id": 2243203681,
+        "stage": "build",
+        "name": "build-job",
+        "status": "running",
+        "created_at": "2022-03-24 01:56:57 UTC",
+        "started_at": "2022-03-24 01:56:58 UTC",
+        "finished_at": null,
+        "duration": 0.237594236,
+        "queued_duration": 0.212991,
+        "when": "on_success",
+        "manual": false,
+        "allow_failure": false,
+        "user": {
+          "id": 18686,
+          "name": "Samuel Loh",
+          "username": "redacted_user",
+          "avatar_url": "https://secure.gravatar.com/avatar/945829c17e100d8b130f38bc3dc60247?s=80&d=identicon",
+          "email": "[REDACTED]"
+        },
+        "runner": {
+          "id": 12270845,
+          "description": "1-green.shared.runners-manager.gitlab.com/default",
+          "runner_type": "instance_type",
+          "active": true,
+          "is_shared": true,
+          "tags": [
+            "gce",
+            "east-c",
+            "linux",
+            "ruby",
+            "mysql",
+            "postgres",
+            "mongo",
+            "git-annex",
+            "shared",
+            "docker"
+          ]
+        },
+        "artifacts_file": {
+          "filename": null,
+          "size": null
+        },
+        "environment": null
+      }
+    ]
+  }
+}
