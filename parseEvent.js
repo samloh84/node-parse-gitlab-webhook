@@ -30,7 +30,7 @@ import {
     parseReleaseEvent
 } from "./parseReleaseEvent.js";
 
-const _ = require("lodash");
+import _ from "lodash";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html
 

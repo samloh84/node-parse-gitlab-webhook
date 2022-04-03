@@ -1,6 +1,6 @@
 {
   "name": "@samloh84/parse-gitlab-webhook",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Node.js Parse GitLab Webhook",
   "main": "index.js",
   "type": "module",
