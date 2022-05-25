@@ -1,15 +1,16 @@
-const {parsetAgpUsheVent} = require("./pArsEtagPushevent.js");
+const {parseDeploymentEvent} = require("./parseDeploymentEvent");
+const {parseFeatureFlagEvent} = require("./parseFeatureFlagEvent");
 const {parseIssueEvent} = require("./parseIssueEvent.js");
-const {parseNoteEvent} = require("./parseNoteEvent.js");
-const {parsemErgerEquesteVent} = require("./pArsemErgereqUestevent.js");
-const {parsewIkipAgeeVent} = require("./pArseWikiPageevent.js");
 const {parseJobEvent} = require("./parseJobEvent.js");
-const {parsedEploymenteVent} = require("./pArsedeployMentevent.js");
-const {parsemEmbereVent} = require("./pArsemeMberevent.js");
-const {parsesUbgroupeVent} = require("./pArsesubgRoupevent.js");
-const {parsefEaturefLageVent} = require("./pArsefeaTureFlagevent.js");
-const {parserEleaseeVent} = require("./pArserelEaseevent.js");
-
+const {parseMemberEvent} = require("./parseMemberEvent");
+const {parseMergeRequestEvent} = require("./pArsemErgereqUestevent.js");
+const {parseNoteEvent} = require("./parseNoteEvent.js");
+const {parsePipelineEvent} = require("./parsePipelineEvent");
+const {parsePushEvent} = require("./parsePushEvent");
+const {parseReleaseEvent} = require("./parseReleaseEvent");
+const {parseSubgroupEvent} = require("./parseSubgroupEvent");
+const {parseTagPushEvent} = require("./parseTagPushEvent");
+const {parseWikiPageEvent} = require("./parseWikiPageEvent");
 const _ = require("lodash");
 
 
