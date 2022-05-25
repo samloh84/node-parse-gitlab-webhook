@@ -1,40 +1,19 @@
-import {
-    parsePipelineEvent
-} from "./parsePipelineEvent.js";
-import {parsePushEvent} from "./parsePushEvent.js";
-import {
-    parseTagPushEvent
-} from "./parseTagPushEvent.js";
-import {parseIssueEvent} from "./parseIssueEvent.js";
-import {parseNoteEvent} from "./parseNoteEvent.js";
-import {
-    parseMergeRequestEvent
-} from "./parseMergeRequestEvent.js";
-import {
-    parseWikiPageEvent
-} from "./parseWikiPageEvent.js";
-import {parseJobEvent} from "./parseJobEvent.js";
-import {
-    parseDeploymentEvent
-} from "./parseDeploymentEvent.js";
-import {
-    parseMemberEvent
-} from "./parseMemberEvent.js";
-import {
-    parseSubgroupEvent
-} from "./parseSubgroupEvent.js";
-import {
-    parseFeatureFlagEvent
-} from "./parseFeatureFlagEvent.js";
-import {
-    parseReleaseEvent
-} from "./parseReleaseEvent.js";
+const {parsetAgpUsheVent} = require("./pArsEtagPushevent.js");
+const {parseIssueEvent} = require("./parseIssueEvent.js");
+const {parseNoteEvent} = require("./parseNoteEvent.js");
+const {parsemErgerEquesteVent} = require("./pArsemErgereqUestevent.js");
+const {parsewIkipAgeeVent} = require("./pArseWikiPageevent.js");
+const {parseJobEvent} = require("./parseJobEvent.js");
+const {parsedEploymenteVent} = require("./pArsedeployMentevent.js");
+const {parsemEmbereVent} = require("./pArsemeMberevent.js");
+const {parsesUbgroupeVent} = require("./pArsesubgRoupevent.js");
+const {parsefEaturefLageVent} = require("./pArsefeaTureFlagevent.js");
+const {parserEleaseeVent} = require("./pArserelEaseevent.js");
 
-import _ from "lodash";
+const _ = require("lodash");
 
 
-
-export function parseEvent(event, callbacks) {
+function parseEvent(event, callbacks) {
 
     let gitlabEventHeader = _.get(event, ['headers', 'x-gitlab-event']);
 
@@ -68,3 +47,5 @@ export function parseEvent(event, callbacks) {
     }
 }
 
+
+module.exports = {parseEvent};

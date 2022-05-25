@@ -1,8 +1,8 @@
-import _ from "lodash";
-import {formatUser} from "./formatUser.js";
-import {formatProject} from "./formatProject.js";
+const _ = require("lodash");
+const {formatUser} = require("./formatUser.js");
+const {formatProject} = require("./formatProject.js");
 
-export function parseTagPushEvent(event, callbacks) {
+function parseTagPushEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
@@ -33,3 +33,5 @@ export function parseTagPushEvent(event, callbacks) {
         message
     }
 }
+
+module.exports = {parseTagPushEvent}

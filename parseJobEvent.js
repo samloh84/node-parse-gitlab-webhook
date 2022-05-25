@@ -1,3 +1,5 @@
-export function parseJobEvent(event, callbacks) {
-    return undefined;
+function parseJobEvent(event, callbacks) {
+    throw new Error("Not implemented");
 }
+
+module.exports = {parseJobEvent};

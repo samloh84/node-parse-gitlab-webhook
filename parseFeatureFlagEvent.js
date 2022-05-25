@@ -1,3 +1,5 @@
-export function parseFeatureFlagEvent(event, callbacks) {
-    return undefined;
+function parseFeatureFlagEvent(event, callbacks) {
+    throw new Error("Not implemented");
 }
+
+module.exports = {parseFeatureFlagEvent};

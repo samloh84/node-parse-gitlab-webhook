@@ -1,6 +1,6 @@
-import _ from "lodash";
+const _ = require("lodash");
 
-export function formatRepository(event) {
+function formatRepository(event) {
     let body = _.get(event, 'body');
     let repository = _.get(body, 'repository');
     let repository_name = _.get(repository, 'name');
@@ -8,3 +8,5 @@ export function formatRepository(event) {
 
     return `[Repository ${repository_name}](${repository_homepage})`;
 }
+
+module.exports = {formatRepository};

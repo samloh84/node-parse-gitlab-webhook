@@ -1,6 +1,6 @@
-import _ from "lodash";
+const _ = require("lodash");
 
-export function formatMergeRequest(event) {
+function formatMergeRequest(event) {
     let body = _.get(event, 'body');
 
     let object_kind = _.get(body, 'object_kind');
@@ -17,3 +17,5 @@ export function formatMergeRequest(event) {
 
     return `[Merge Request ${mergeRequestIid} ${mergeRequestTitle}](${mergeRequestUrl})`;
 }
+
+module.exports = {formatMergeRequest};

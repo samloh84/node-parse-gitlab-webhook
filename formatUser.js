@@ -1,6 +1,6 @@
-import _ from "lodash";
+const _ = require("lodash");
 
-export function formatUser(event) {
+ function formatUser(event) {
     let body = _.get(event, 'body');
 
 
@@ -17,3 +17,5 @@ export function formatUser(event) {
 
     return `${user_name} [${user_username}]`;
 }
+
+module.exports = {formatUser};

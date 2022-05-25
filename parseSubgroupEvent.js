@@ -1,3 +1,5 @@
-export function parseSubgroupEvent(event, callbacks) {
-    return undefined;
+function parseSubgroupEvent(event, callbacks) {
+    throw new Error("Not implemented");
 }
+
+module.exports = {parseSubgroupEvent};

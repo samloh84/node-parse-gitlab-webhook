@@ -1,19 +1,40 @@
-export {parsePushEvent} from "./parsePushEvent.js";
-export {parseTagPushEvent} from "./parseTagPushEvent.js";
-export {parseIssueEvent} from "./parseIssueEvent.js";
-export {parseNoteEvent} from "./parseNoteEvent.js";
-export {parseMergeRequestEvent} from "./parseMergeRequestEvent.js";
-export {parseWikiPageEvent} from "./parseWikiPageEvent.js";
-export {parsePipelineEvent} from "./parsePipelineEvent.js";
-export {parseJobEvent} from "./parseJobEvent.js";
-export {parseDeploymentEvent} from "./parseDeploymentEvent.js";
-export {parseMemberEvent} from "./parseMemberEvent.js";
-export {parseSubgroupEvent} from "./parseSubgroupEvent.js";
-export {parseFeatureFlagEvent} from "./parseFeatureFlagEvent.js";
-export {parseReleaseEvent} from "./parseReleaseEvent.js";
-export {formatMergeRequest} from "./formatMergeRequest.js";
-export {formatProject} from "./formatProject.js";
-export {formatRepository} from "./formatRepository.js";
-export {formatUser} from "./formatUser.js";
-export {parseEvent} from "./parseEvent.js";
+const {parsePushEvent} = require("./parsePushEvent.js");
+const {parseTagPushEvent} = require("./parseTagPushEvent.js");
+const {parseIssueEvent} = require("./parseIssueEvent.js");
+const {parseNoteEvent} = require("./parseNoteEvent.js");
+const {parseMergeRequestEvent} = require("./parseMergeRequestEvent.js");
+const {parseWikiPageEvent} = require("./parseWikiPageEvent.js");
+const {parsePipelineEvent} = require("./parsePipelineEvent.js");
+const {parseJobEvent} = require("./parseJobEvent.js");
+const {parseDeploymentEvent} = require("./parseDeploymentEvent.js");
+const {parseMemberEvent} = require("./parseMemberEvent.js");
+const {parseSubgroupEvent} = require("./parseSubgroupEvent.js");
+const {parseFeatureFlagEvent} = require("./parseFeatureFlagEvent.js");
+const {parseReleaseEvent} = require("./parseReleaseEvent.js");
+const {formatMergeRequest} = require("./formatMergeRequest.js");
+const {formatProject} = require("./formatProject.js");
+const {formatRepository} = require("./formatRepository.js");
+const {formatUser} = require("./formatUser.js");
+const {parseEvent} = require("./parseEvent.js");
 
+
+module.exports = {
+    parsePushEvent,
+    parseTagPushEvent,
+    parseIssueEvent,
+    parseNoteEvent,
+    parseMergeRequestEvent,
+    parseWikiPageEvent,
+    parsePipelineEvent,
+    parseJobEvent,
+    parseDeploymentEvent,
+    parseMemberEvent,
+    parseSubgroupEvent,
+    parseFeatureFlagEvent,
+    parseReleaseEvent,
+    formatMergeRequest,
+    formatProject,
+    formatRepository,
+    formatUser,
+    parseEvent
+};

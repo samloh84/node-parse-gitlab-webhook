@@ -1,3 +1,5 @@
-export function parseMemberEvent(event, callbacks) {
-    return undefined;
+function parseMemberEvent(event, callbacks) {
+    throw new Error("Not implemented");
 }
+
+module.exports = {parseMemberEvent};

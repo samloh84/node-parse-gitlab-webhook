@@ -1,9 +1,9 @@
-import _ from "lodash";
-import {formatUser} from "./formatUser.js";
-import {formatProject} from "./formatProject.js";
-import {formatMergeRequest} from "./formatMergeRequest.js";
+const _ = require("lodash");
+const {formatUser} = require("./formatUser.js");
+const {formatProject} = require("./formatProject.js");
+const {formatMergeRequest} = require("./formatMergeRequest.js");
 
-export function parsePipelineEvent(event, callbacks) {
+ function parsePipelineEvent(event, callbacks) {
     let body = _.get(event, 'body');
 
     let formatUserCallback = _.get(callbacks, 'formatUser');
@@ -124,3 +124,5 @@ export function parsePipelineEvent(event, callbacks) {
         message
     }
 }
+
+module.exports = {parsePipelineEvent}
